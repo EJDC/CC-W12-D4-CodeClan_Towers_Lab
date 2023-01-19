@@ -16,9 +16,9 @@ public class Hotel {
         }
     }
 
-    public ArrayList<Bedroom> getBedrooms() {
-        return bedrooms;
-    }
+//    public ArrayList<Bedroom> getBedrooms() {
+//        return bedrooms;
+//    }
 
     public void checkin(ArrayList<Guest> guests, int roomNumber) {
         Bedroom foundBedroom = findBedroom(roomNumber);

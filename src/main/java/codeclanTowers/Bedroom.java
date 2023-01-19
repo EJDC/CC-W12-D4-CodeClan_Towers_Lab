@@ -17,9 +17,9 @@ public class Bedroom extends Room {
         return roomNumber;
     }
 
-    public RoomType getType() {
-        return type;
-    }
+//    public RoomType getType() {
+//        return type;
+//    }
 
     public int getNightlyRate() {
         return nightlyRate;
