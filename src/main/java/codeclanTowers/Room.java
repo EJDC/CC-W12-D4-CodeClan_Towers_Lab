@@ -16,6 +16,16 @@ public abstract class Room {
         return width * length;
     }
 
+    public void checkin(ArrayList<Guest> guests) {
+        if (this.getNumberOfGuests() > 0) return;
+        if (this.getCapacity() < guests.size()) {
+            return;
+        }
+        for (Guest guest : guests) {
+            this.addGuest(guest);
+        }
+    }
+
     public int getCapacity() {
         return capacity;
     }

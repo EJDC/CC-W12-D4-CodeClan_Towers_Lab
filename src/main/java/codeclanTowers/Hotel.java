@@ -23,13 +23,7 @@ public class Hotel {
     public void checkin(ArrayList<Guest> guests, int roomNumber) {
         Bedroom foundBedroom = findBedroom(roomNumber);
         if (foundBedroom == null) return;
-        if (foundBedroom.getNumberOfGuests() > 0) return;
-        if (foundBedroom.getCapacity() < guests.size()) {
-            return;
-        }
-        for (Guest guest : guests) {
-            foundBedroom.addGuest(guest);
-        }
+        foundBedroom.checkin(guests);
     }
 
     public Bedroom findBedroom(int roomNumber) {
