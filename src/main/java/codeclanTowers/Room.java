@@ -12,6 +12,10 @@ public abstract class Room {
         this.guests = new ArrayList<>();
     }
 
+    public static int calculateSize(int width, int length) {
+        return width * length;
+    }
+
     public int getCapacity() {
         return capacity;
     }
@@ -24,5 +28,9 @@ public abstract class Room {
         if (guests.size() + 1 <= capacity) {
             guests.add(guest);
         }
+    }
+
+    public void vacate() {
+        this.guests.clear();
     }
 }

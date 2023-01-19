@@ -1,26 +1,38 @@
 package codeclanTowers;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Hotel {
 
     private final ArrayList<Bedroom> bedrooms;
-    private final ArrayList<ConferenceRoom> conferenceRooms;
+    private final HashMap<String, ConferenceRoom> conferenceRooms;
 
     public Hotel(ArrayList<Bedroom> bedrooms, ArrayList<ConferenceRoom> conferenceRooms) {
         this.bedrooms = bedrooms;
-        this.conferenceRooms = conferenceRooms;
+        this.conferenceRooms = new HashMap<>();
+        for (ConferenceRoom conferenceRoom : conferenceRooms) {
+            this.conferenceRooms.put(conferenceRoom.getName(), conferenceRoom);
+        }
     }
 
     public ArrayList<Bedroom> getBedrooms() {
         return bedrooms;
     }
 
-    public ArrayList<ConferenceRoom> getConferenceRooms() {
-        return conferenceRooms;
+    public void checkin(ArrayList<Guest> guests, int roomNumber) {
+        Bedroom foundBedroom = findBedroom(roomNumber);
+        if (foundBedroom == null) return;
+        if (foundBedroom.getNumberOfGuests() > 0) return;
+        if (foundBedroom.getCapacity() < guests.size()) {
+            return;
+        }
+        for (Guest guest : guests) {
+            foundBedroom.addGuest(guest);
+        }
     }
 
-    public void checkin(ArrayList<Guest> guests, int roomNumber) {
+    public Bedroom findBedroom(int roomNumber) {
         Bedroom foundBedroom = null;
         for (Bedroom currentBedroom : this.bedrooms) {
             if (currentBedroom.getRoomNumber() == roomNumber) {
@@ -28,14 +40,32 @@ public class Hotel {
                 break;
             }
         }
-        if (foundBedroom == null) {
-            return;
+        return foundBedroom;
+    }
+
+    public Booking bookRoom(int roomNumber, int nights) {
+        Bedroom foundBedroom = this.findBedroom(roomNumber);
+        if (foundBedroom == null) return null;
+        return new Booking(foundBedroom, nights);
+    }
+
+    public ConferenceRoom getConferenceRoomByName(String name) {
+        return this.conferenceRooms.get(name);
+    }
+
+    public ArrayList<Bedroom> findAllVacantBedrooms() {
+        ArrayList<Bedroom> vacantBedrooms = new ArrayList<>();
+        for (Bedroom bedroom : this.bedrooms) {
+            if (bedroom.getNumberOfGuests() == 0) {
+                vacantBedrooms.add(bedroom);
+            }
         }
-        if (foundBedroom.getCapacity() < guests.size()) {
-            return;
-        }
-        for (Guest guest : guests) {
-            foundBedroom.addGuest(guest);
-        }
+        return vacantBedrooms;
+    }
+
+    public void vacateRoom(int roomNumber) {
+        Bedroom foundBedroom = this.findBedroom(roomNumber);
+        if (foundBedroom == null) return;
+        foundBedroom.vacate();
     }
 }

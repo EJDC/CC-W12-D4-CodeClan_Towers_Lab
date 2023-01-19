@@ -4,24 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b3b752e0-e7b7-4be5-b2b9-076db91f9056" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/codeclanTowers/Bedroom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/codeclanTowers/ConferenceRoom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/codeclanTowers/Guest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/codeclanTowers/Hotel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/codeclanTowers/Room.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/codeclanTowers/RoomType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/codeclanTowers/BedroomTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/codeclanTowers/ConferenceRoomTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/codeclanTowers/GuestTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/codeclanTowers/HotelTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/codeclanTowers/RoomTypeTest.java" afterDir="false" />
+    <list default="true" id="b3b752e0-e7b7-4be5-b2b9-076db91f9056" name="Changes" comment="Initial Commit MVP Complete">
+      <change afterPath="$PROJECT_DIR$/src/main/java/codeclanTowers/Booking.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/codeclanTowers/BookingTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/codeclanTowers/RoomTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/codeclanTowers/Bedroom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/codeclanTowers/Bedroom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/codeclanTowers/Hotel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/codeclanTowers/Hotel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/codeclanTowers/Room.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/codeclanTowers/Room.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/codeclanTowers/BedroomTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/codeclanTowers/BedroomTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/codeclanTowers/ConferenceRoomTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/codeclanTowers/ConferenceRoomTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/codeclanTowers/HotelTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/codeclanTowers/HotelTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +52,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="codeclanTowers" />
+    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
@@ -90,6 +86,14 @@
       <option name="presentableId" value="Default" />
       <updated>1674126011662</updated>
     </task>
+    <task id="LOCAL-00001" summary="Initial Commit MVP Complete">
+      <created>1674130146585</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1674130146585</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -102,5 +106,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial Commit MVP Complete" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit MVP Complete" />
   </component>
 </project>

@@ -29,4 +29,9 @@ public class ConferenceRoomTest {
         assertEquals(0, conferenceRoom.getNumberOfGuests());
     }
 
+
+    @Test
+    public void canCalculateConferenceRoomSize() {
+        assertEquals(12, ConferenceRoom.calculateSize(3, 4));
+    }
 }
